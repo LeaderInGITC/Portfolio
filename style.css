@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Fira: Fira Code;
+}
+body {
+    background-color: rgb(128, 128, 128);
+    background-size: cover;   
+}
+
+
+
