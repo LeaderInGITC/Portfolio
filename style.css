@@ -3,13 +3,73 @@
     margin: 0;
     padding: 0;
 }
+
 :root {
     --Fira: Fira Code;
 }
+
 body {
-    background-color: rgb(128, 128, 128);
-    background-size: cover;   
+    background-color: rgb(41, 45, 54);
 }
 
+.leftAnimationForMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    gap: 8px;
+    position: absolute;
+    top: 0;
+    left:17px;
+    transition: transform 0.3s ease;
 
+    img:nth-of-type(1) {
+        width: 1px;
+        height: 180px;
+        border: none;
+        outline: none;
+    }
 
+    img:nth-of-type(2) {
+        width: 21px;
+        height: 20px;
+        border: none;
+        outline: none;
+        object-fit: contain;
+
+    }
+
+    img:nth-of-type(3) {
+        width: 23px;
+        height: 23px;
+        border: none;
+        outline: none;
+        object-fit: contain;
+
+    }
+
+    img:nth-of-type(4) {
+        width: 14px;
+        height: 20px;
+        border: none;
+        outline: none;
+        object-fit: contain;
+
+    }
+
+}
+
+@keyframes dropBounce {
+    0% { transform: translateY(-100px); }
+    70% { transform: translateY(0px); }
+    85% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes jumpUp {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-20px); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}
