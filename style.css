@@ -11,8 +11,13 @@
 
 html,
 body {
-    cursor: url('Images/1.png'),auto;
+    cursor: url('Images/download.png') 4 4, default;
     background-color: rgb(41, 45, 54);
+}
+
+button,
+a {
+    cursor: url('Images/2.png') 4 4, pointer;
 }
 
 .leftAnimationForMenu {
@@ -26,6 +31,7 @@ body {
     top: 0;
     left: 17px;
     transition: 0.3s;
+    animation: smoothDrop 1.8s ease-out forwards;
 
     .onlyYou {
         width: 1px;
@@ -89,5 +95,25 @@ body {
         opacity: 1;
         transform: translateX(0);
         transition-delay: 0s;
+    }
+}
+
+@keyframes smoothDrop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
