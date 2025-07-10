@@ -12,7 +12,7 @@
 html,
 
 body {
-    
+
     cursor: url('Images/download.png') 4 4, default;
     background-color: rgb(41, 45, 54);
 }
@@ -27,11 +27,12 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    animation: smoothDrop 1.8s ease-out forwards;
     width: 42px;
     gap: 8px;
     position: absolute;
     top: 0;
-    left:17px;
+    left: 17px;
     transition: transform 0.3s ease;
 
     .onlyYou {
@@ -44,6 +45,7 @@ a {
 
     a {
         display: flex;
+        text-decoration: none;
         gap: 8px;
     }
 
@@ -74,18 +76,57 @@ a {
 
     }
 
+    a span {
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        color: var(--purple);
+        transition-delay: 1s, 1s;
+        font-family: var(--Fira);
+        white-space: nowrap;
+    }
+
 }
 
-@keyframes dropBounce {
-    0% { transform: translateY(-100px); }
-    70% { transform: translateY(0px); }
-    85% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+.leftAnimationForMenu {
+    a:hover span {
+        animation: migat 0.1s linear infinite;
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0s;
+    }
 }
 
-@keyframes jumpUp {
-    0% { transform: translateY(0); }
-    30% { transform: translateY(-20px); }
-    50% { transform: translateY(0); }
-    100% { transform: translateY(-100px); }
+@keyframes smoothDrop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes migat {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
