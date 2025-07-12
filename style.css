@@ -99,6 +99,96 @@ header {
   padding-top: 32px;
   justify-content: space-between;
   align-items: center;
+
+  .mediaMenuIcon {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    transition: 0.3s;
+  }
+
+  .mediaMenuOnClick {
+    max-width: 380px;
+    padding: 20px;
+    position: absolute;
+    top: -500px;
+    left: 140px;
+    border: 1px solid;
+    animation: migat-border 0.1s linear infinite;
+    transition: .3s;
+
+
+    .mediaMenuOnClickHeader {
+      display: flex;
+      gap: 50px;
+      margin-bottom: 47px;
+      .x:hover {
+        animation: migat 0.1s linear infinite;
+        outline: var(--purple);
+      }
+    }
+    .eliasAndImage2 {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      img {
+        width: 16px;
+      }
+      
+
+      .eliasAndImageLinkHomePage2 {
+        font-family: var(--Fira);
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 16px;
+        line-height: 100%;
+        color: var(--white);
+        text-decoration: none;
+      }
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        display: flex;
+        text-decoration: none;
+
+        p {
+          color: var(--purple);
+          font-family: var(--Fira);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 100%;
+
+
+        }
+
+        span {
+          color: var(--white);
+          font-family: var(--Fira);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 100%;
+        }
+
+      }
+
+      a:hover {
+
+        p,
+        span {
+          animation: migat 0.1s linear infinite;
+          color: var(--purple);
+        }
+      }
+    }
+  }
+
   .eliasAndImage {
     display: flex;
     gap: 8px;
@@ -214,4 +304,16 @@ header {
   100% {
     opacity: 1;
   }
+}
+@keyframes migat-border {
+  0%, 100% {
+    box-shadow: 0 0 0 1px #c778dd;
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgba(199, 120, 221, 0.3);
+  }
+}
+
+.blink-border {
+  animation: migat-border 0.4s linear infinite;
 }
