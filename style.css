@@ -7,6 +7,7 @@
 :root {
   --Fira: Fira Code;
   --purple: #c778dd;
+  --white: #FFFFFF;
 }
 
 html,
@@ -28,7 +29,7 @@ a {
   animation: smoothDrop 1.8s ease-out forwards;
   width: 42px;
   gap: 8px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 17px;
   transition: transform 0.3s ease;
@@ -89,6 +90,96 @@ a {
     opacity: 1;
     transition-delay: 0s;
   }
+}
+
+header {
+  display: flex;
+  padding-left: 170px;
+  padding-right: 170px;
+  padding-top: 32px;
+  justify-content: space-between;
+  align-items: center;
+  .eliasAndImage {
+    display: flex;
+    gap: 8px;
+
+    img {
+      width: 16px;
+    }
+
+    .eliasAndImageLinkHomePage {
+      font-family: var(--Fira);
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 16px;
+      line-height: 100%;
+      color: var(--white);
+      text-decoration: none;
+    }
+  }
+
+
+  nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+    a {
+      display: flex;
+      text-decoration: none;
+
+      p {
+        color: var(--purple);
+        font-family: var(--Fira);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+
+
+      }
+
+      span {
+        color: var(--white);
+        font-family: var(--Fira);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+      }
+
+    }
+
+    a:hover {
+
+      p,
+      span {
+        animation: migat 0.1s linear infinite;
+        color: var(--purple);
+      }
+    }
+  }
+}
+
+#language-select {
+  font-family: var(--Fira);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#language-select:hover {
+  border-color: var(--purple);
+  background-color: #c778dd;
+  animation: migat 0.1s linear infinite;
+}
+
+#language-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px --purple;
+  border-color: var(--purple);
 }
 
 @keyframes smoothDrop {
