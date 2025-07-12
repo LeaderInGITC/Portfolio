@@ -113,7 +113,7 @@ header {
     padding: 20px;
     position: absolute;
     top: -500px;
-    left: 120px;
+    left: 100px;
     border: 1px solid;
     animation: migat-border 0.1s linear infinite;
     transition: .3s;
