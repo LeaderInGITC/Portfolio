@@ -9,12 +9,13 @@
   --purple: #c778dd;
   --white: #ffffff;
   --gray: #ABB2BF;
+  --bgcolor:rgb(41, 45, 54);
 }
 
 html,
 body {
   cursor: url("Images/download.png") 4 4, default;
-  background-color: rgb(41, 45, 54);
+  background-color:var(--bgcolor) ;
 }
 
 button,
@@ -100,6 +101,7 @@ header {
   padding-top: 32px;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--bgcolor);
   position: fixed;
   left: 0;
   right: 0;
