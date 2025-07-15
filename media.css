@@ -152,8 +152,6 @@
     .mediaMenuOnClick {
         display: block;
     }
-}
-@media (max-width:390px) {
     header {
         padding-left: 30px;
         padding-right: 30px;
@@ -168,4 +166,20 @@
             max-width: 380px;
         }
     }
+}
+@media (max-width:390px) {
+    /* header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    main .sectionOne {
+        padding-left:30px;
+        padding-right: 30px;
+        .sectionOneLeftPart {
+            max-width: 380px;
+        }
+        .sectionOneRightPart {
+            max-width: 380px;
+        }
+    } */
 }
