@@ -128,7 +128,7 @@ header {
     border: 1px solid;
     animation: migat-border 0.1s linear infinite;
     transition: opacity 0.5s;
-    background-color: rgb(28, 27, 27);
+    background-color: rgb(42, 42, 42);
 
     .mediaMenuOnClickHeader {
       display: flex;
