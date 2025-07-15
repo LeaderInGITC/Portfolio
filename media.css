@@ -2,6 +2,7 @@
     .mediaMenuIcon {
         display: none;
     }
+
     .mediaMenuOnClick {
         display: none;
     }
@@ -11,30 +12,108 @@
         padding-right: 100px;
     }
 }
-@media (width<=1300px) {
+
+@media (max-width:1300px) {
     .sectionOne {
-        padding: 0px 80px;
+        padding: 0px 100px;
+
     }
 }
+
+@media (max-width: 1250px) {
+    main .sectionOne {
+        .sectionOneRightPart {
+            .sectionOneRightPartBottom {
+                p {
+                    font-size: 14px;
+
+                }
+
+                a {
+                    color: var(--gray);
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    main .sectionOne {
+        .sectionOneLeftPart {
+            .firstP {
+                margin-top: 32px;
+                margin-bottom: 24px;
+                max-width: 750px;
+                color: var(--white);
+                font-weight: 600;
+                font-size: 26px;
+                line-height: 100%;
+
+                span {
+                    color: var(--purple);
+                    animation: migat 0.1s linear infinite;
+                    font-weight: 600;
+                    font-size: 26px;
+                    line-height: 100%;
+                }
+            }
+
+            .secondP {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+        }
+
+    }
+
+
+}
+
+
+@media (max-width:1000px) {
+    .sectionOne {
+        padding: 0px 140px;
+
+    }
+}
+
 @media (width<=900px) {
     .sectionOne {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        .sectionOneLeftPart {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            button {
+                margin: 24px auto 0;
+            }
+        }
     }
 }
+
 @media (max-width:800px) {
     .mediaMenuIcon {
         display: inline-block;
     }
+
     .mediaMenuOnClick {
         display: inline-block;
     }
+
     header .one {
         display: none;
     }
 
 }
+
 @media (max-width:750px) {
     header .one a:nth-of-type(3) {
         display: none;
@@ -69,8 +148,9 @@
     header .one {
         display: none;
     }
+
     .mediaMenuOnClick {
-        display: block;        
+        display: block;
     }
 
 

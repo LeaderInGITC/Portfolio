@@ -35,6 +35,8 @@ a {
   left: 17px;
   transition: transform 0.3s ease;
 
+  z-index: 1000;
+
   .onlyYou {
     width: 1px;
     height: 90px;
@@ -83,9 +85,7 @@ a {
     white-space: nowrap;
     margin-left: 10px;
   }
-}
 
-.leftAnimationForMenu {
   a:hover span {
     animation: migat 0.1s linear infinite;
     opacity: 1;
@@ -100,12 +100,18 @@ header {
   padding-top: 32px;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 999;
 
   .mediaMenuIcon {
     img {
       width: 100%;
       height: 100%;
     }
+
     transition: 0.3s;
   }
 
@@ -120,6 +126,7 @@ header {
     border: 1px solid;
     animation: migat-border 0.1s linear infinite;
     transition: opacity 0.5s;
+    background-color: rgb(28, 27, 27);
 
     .mediaMenuOnClickHeader {
       display: flex;
@@ -280,9 +287,11 @@ main {
     top: 103px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     gap: 18px;
     padding-bottom: 112px;
-    
+    z-index: 10;
+
 
     .sectionOneLeftPart {
 
@@ -292,9 +301,29 @@ main {
       justify-content: center;
       margin: auto 0;
 
+      button {
+        padding: 8px 16px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        animation: migatBorder 1s linear infinite;
+        margin-top: 24px;
+
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 100%;
+          color: var(--white);
+          font-family: var(--Fira);
+        }
+      }
+
       .firstP {
         margin-top: 32px;
         margin-bottom: 24px;
+        max-width: 750px;
         color: var(--white);
         font-weight: 600;
         font-size: 32px;
@@ -409,6 +438,16 @@ main {
 
   50% {
     box-shadow: 0 0 0 1px rgba(199, 120, 221, 0.3);
+  }
+}
+@keyframes migatBorder {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px var(--purple);
+  }
+
+  50% {
+    box-shadow: 0 0 0 2px rgba(199, 120, 221, 0.2);
   }
 }
 
