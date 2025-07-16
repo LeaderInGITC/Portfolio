@@ -9,13 +9,13 @@
   --purple: #c778dd;
   --white: #ffffff;
   --gray: #ABB2BF;
-  --bgcolor:rgb(41, 45, 54);
+  --bgcolor: rgb(41, 45, 54);
 }
 
 html,
 body {
   cursor: url("Images/download.png") 4 4, default;
-  background-color:var(--bgcolor) ;
+  background-color: var(--bgcolor);
 }
 
 button,
@@ -128,7 +128,8 @@ header {
     border: 1px solid;
     animation: migat-border 0.1s linear infinite;
     transition: opacity 0.5s;
-    background-color: rgb(42, 42, 42);
+    background-color: transparent;
+    backdrop-filter: blur(19px);
 
     .mediaMenuOnClickHeader {
       display: flex;
@@ -139,6 +140,22 @@ header {
       .x:hover {
         animation: migat 0.1s linear infinite;
         outline: var(--purple);
+      }
+    }
+
+    .mediaMenuOnClickBottom {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+
+      a img {
+        max-width: 20px;
+        max-height: 20px;
+      }
+
+      a:hover {
+        animation: migat 0.1s linear infinite;
       }
     }
 
@@ -356,8 +373,32 @@ main {
       flex-direction: column;
       align-items: center;
 
-      .blackBoy {
-        width: 100%;
+      .zIndexImages {
+        position: relative;
+
+
+        .blackBoy {
+          width: 100%;
+          z-index: 10;
+          position: relative;
+        }
+
+        .StyleOutline {
+          position: absolute;
+          top: 84px;
+          left: -12px;
+          z-index: 9;
+          max-width: 400px;
+          animation: migat 0.1s linear infinite;
+        }
+        .Dots {
+          position: absolute;
+          bottom:56px;
+          right: 16px;
+          z-index: 11;
+          max-width: 300px;
+          animation: migat 0.1s linear infinite;
+        } 
       }
 
       .sectionOneRightPartBottom {
@@ -442,7 +483,9 @@ main {
     box-shadow: 0 0 0 1px rgba(199, 120, 221, 0.3);
   }
 }
+
 @keyframes migatBorder {
+
   0%,
   100% {
     box-shadow: 0 0 0 2px var(--purple);
