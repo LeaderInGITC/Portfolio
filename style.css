@@ -14,7 +14,7 @@
 
 html,
 body {
-  cursor: url("Images/download.png") 4 4, default;
+  cursor: url("Images/download.png") 0 0, default;
   background-color: var(--bgcolor);
 }
 
