@@ -189,6 +189,15 @@
     }
 }
 
+@media (max-width:600px) {
+    main .sectionOne {
+        .sectionOneRightPart {
+            .zIndexImages .Dots {
+                width: 80px;
+            }
+        }
+    }
+}
 @media (max-width:510px) {
     main .sectionOne .sectionOneRightPart .zIndexImages .StyleOutline {
         top: 34px;
